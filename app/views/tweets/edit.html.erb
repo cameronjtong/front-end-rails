@@ -1,6 +1,9 @@
 <h1>Editing tweet</h1>
-
+<%= turbo_frame_tag dom_id(@tweet) do %>
+<div class='tweet'>
 <%= render "form", tweet: @tweet %>
+</div>
+<% end %>
 
 <br>
 

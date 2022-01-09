@@ -1,8 +1,7 @@
 <%= turbo_frame_tag dom_id(tweet) do %>
 <div id="<%= dom_id tweet %>" class='tweet'>
   <p>
-    <strong>Content:</strong>
-    <%= tweet.content %>
+    <%= tweet.content %> <%= link_to '(edit)', edit_tweet_path(tweet) %>
   </p>
 
   <p>
@@ -10,8 +9,7 @@
   </p>
 
   <p>
-    <small>Retweets:</small>
-    <%= tweet.retweets.to_i %>
+     <%= button_to "Retweets (#{tweet.retweets})", tweet_retweet_path(tweet), method: :post %>
   </p>
    <%= button_to "Destroy this tweet", tweet, method: :delete %>
 </div>
