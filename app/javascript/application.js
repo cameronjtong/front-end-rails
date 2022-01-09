@@ -4,6 +4,6 @@ import * as bootstrap from "bootstrap"
 import './src/jquery'
 import './src/jquery-ui'
 
-$(function(){
-  console.log('jquery is wired up')
-})
+$( function() {
+    $( "#dialog" ).dialog();
+  } );
