@@ -6,8 +6,7 @@
   </p>
 
   <p>
-    <small>Likes:</small>
-    <%= tweet.likes.to_i %>
+    <%= button_to "Likes (#{tweet.likes})", tweet_like_path(tweet), method: :post %>
   </p>
 
   <p>
