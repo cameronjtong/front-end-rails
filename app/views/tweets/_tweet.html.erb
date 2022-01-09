@@ -14,6 +14,6 @@
     <small>Retweets:</small>
     <%= tweet.retweets.to_i %>
   </p>
-
+   <%= button_to "Destroy this tweet", tweet, method: :delete %>
 </div>
 <% end %>
